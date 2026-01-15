@@ -116,7 +116,7 @@ export default function RetroSideNavbar({ activeSection = "home", onSectionClick
               {/* Backdrop */}
               <motion.div
                 className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40"
-                initial={{ opacity: 0 }}
+                initial={false}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={() => setIsOpen(false)}
@@ -125,7 +125,7 @@ export default function RetroSideNavbar({ activeSection = "home", onSectionClick
               {/* Mobile Menu */}
               <motion.div
                 className="fixed left-0 top-0 h-full w-[280px] bg-black/95 backdrop-blur-md border-r border-gray-800 z-50 flex flex-col"
-                initial={{ x: -280 }}
+               initial={false}
                 animate={{ x: 0 }}
                 exit={{ x: -280 }}
                 transition={{ duration: 0.3 }}
@@ -152,7 +152,7 @@ export default function RetroSideNavbar({ activeSection = "home", onSectionClick
                             : `bg-black/30 border-gray-700 text-slate-300 hover:${item.borderColor}/50 hover:${item.activeColor}`
                         }`}
                         onClick={() => scrollToSection(item.id)}
-                        initial={{ opacity: 0, x: -20 }}
+                        initial={false}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.1 }}
                         whileHover={{ scale: 1.02 }}
@@ -220,7 +220,7 @@ export default function RetroSideNavbar({ activeSection = "home", onSectionClick
   return (
     <motion.div
       className="fixed left-0 top-0 h-full w-[280px] bg-black/95 backdrop-blur-md border-r border-gray-800 z-30 flex flex-col"
-      initial={{ x: -280 }}
+      initial={false}
       animate={{ x: 0 }}
       transition={{ duration: 0.5 }}
     >
@@ -246,7 +246,7 @@ export default function RetroSideNavbar({ activeSection = "home", onSectionClick
                   : `bg-black/30 border-gray-700 text-slate-300 hover:${item.borderColor}/50 hover:${item.activeColor}`
               }`}
               onClick={() => scrollToSection(item.id)}
-              initial={{ opacity: 0, x: -20 }}
+              initial={false}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ scale: 1.02 }}
