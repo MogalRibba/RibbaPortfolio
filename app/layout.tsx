@@ -20,11 +20,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <MotionConfig reducedMotion="never">
-          <ClientThemeProvider>{children}</ClientThemeProvider>
-        </MotionConfig>
-      </body>
+      <body className={`${inter.className} bg-black`}>
+  <ClientThemeProvider>
+    <div id="__app" className="min-h-screen">
+      {children}
+    </div>
+  </ClientThemeProvider>
+</body>
+
     </html>
   )
 }
