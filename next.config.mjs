@@ -2,9 +2,8 @@
 const nextConfig = {
   output: "export",
 
-  // GitHub Pages project repo name
+  // GitHub Pages project repo
   basePath: "/RibbaPortfolio",
-  assetPrefix: "/RibbaPortfolio/",
 
   images: {
     unoptimized: true,
