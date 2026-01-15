@@ -2,12 +2,18 @@
 const nextConfig = {
   output: "export",
 
-  // GitHub Pages project repo
   basePath: "/RibbaPortfolio",
+  assetPrefix: "/RibbaPortfolio/",
 
   images: {
     unoptimized: true,
   },
+
+  experimental: {
+    appDir: true,
+  },
+
+  reactStrictMode: false,
 };
 
 export default nextConfig;

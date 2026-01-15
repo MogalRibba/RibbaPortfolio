@@ -1,3 +1,5 @@
+"use client";
+
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
@@ -9,8 +11,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Ribba Mogal - Portfolio",
-  description: "Frontend Developer, Android Developer, Unity Game Developer",
-  generator: "v0.dev",
+  description: "Frontend Developer, Android Developer, Unity Game Developer"
 }
 
 export default function RootLayout({
