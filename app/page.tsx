@@ -192,7 +192,7 @@ export default function Portfolio() {
       title: "Cryptocurrency Wallet with Live Market Price",
       description:
         "Developed a cryptocurrency wallet website with real-time market price updates using HTML, CSS, and JavaScript. Integrated live tracking, wallet management, and secure user authentication.",
-      image: "/images/cryptoza.png",
+      image: "/RibbaPortfolio/images/cryptoza.png",
       tech: ["HTML", "CSS", "JavaScript", "API Integration"],
       github:
         "https://github.com/MogalRibba/Cryptocurrency-Wallet-with-live-market-price?tab=readme-ov-file#-folder-structure",
@@ -205,7 +205,7 @@ export default function Portfolio() {
       title: "Smart Vehicle Parking System",
       description:
         "Developed a Smart Vehicle Parking System using Proteus for circuit simulation, then built the actual model integrating IR sensors, servomotors, Arduino Uno and an LCD for efficient parking management.",
-      image: "/images/smartvehicle.png",
+      image: "/RibbaPortfolio/images/smartvehicle.png",
       tech: ["Arduino", "C++", "Proteus", "Hardware"],
       details: "https://drive.google.com/drive/folders/1NJDrC2zb3GUXd9SbQtR1CYPp-3W0ASBQ?usp=drive_link",
       semester: "SEM-5",
@@ -215,7 +215,7 @@ export default function Portfolio() {
       title: "Anti Sleep Alarm Glasses",
       description:
         "Designed and developed Anti-Sleep Alarm Glasses to prevent driver fatigue and enhance road safety. Assembled and tested multiple prototypes to ensure accurate detection and timely alerts.",
-      image: "/images/asag.jpeg",
+      image: "/RibbaPortfolio/images/asag.jpeg",
       tech: ["Arduino", "Sensors", "Hardware"],
       details: "https://drive.google.com/drive/folders/1ZLF1lTwmji48mHK50HNwhneLNA0A8eoV?usp=drive_link",
       semester: "SEM-4",
@@ -225,7 +225,7 @@ export default function Portfolio() {
       title: "Mini Audio Amplifier",
       description:
         "Designed and developed a compact audio amplifier for small-scale applications. Utilized Proteus software for schematic & PCB layout design. Assembled and tested multiple prototypes for high-fidelity and efficient performance.",
-      image: "/images/miniaudio.jpeg",
+      image: "/RibbaPortfolio/images/miniaudio.jpeg",
       tech: ["Electronics", "PCB Design", "Proteus"],
       details: "https://drive.google.com/drive/folders/1QB8aaIXKKq_uMDQtB1y1zw3KSViezPMM?usp=drive_link",
       semester: "SEM-3",
@@ -238,7 +238,7 @@ export default function Portfolio() {
       title: "Tetra Mania",
       description:
         "A classic Tetris game built with Unity. Features smooth gameplay and a comprehensive scoring system.",
-      image: "/images/TetraMania.jpeg",
+      image: "/RibbaPortfolio/images/TetraMania.jpeg",
       tech: ["Unity", "C#", "Game Development", "Android"],
       apkUrl: "https://github.com/MogalRibba/Tetra-Mania-APK-download/releases/download/v1.0.0/TetraMania.apk",
       detailedDescription:
@@ -254,7 +254,7 @@ export default function Portfolio() {
       title: "TypeRush",
       description:
         "A web-based typing platform with speed tests and accuracy tracking. Includes an engaging word catcher game.",
-      image: "/images/TypeRush.png",
+      image: "/RibbaPortfolio/images/TypeRush.png",
       tech: ["HTML", "CSS", "JavaScript", "Web Development"],
       website: "https://lnkd.in/dHxzqc4k",
       github: "https://lnkd.in/du8NQvv5",
@@ -272,7 +272,7 @@ export default function Portfolio() {
     {
       title: "Quad Connect",
       description: "A Connect Four game developed with Flutter and Dart. Features clean UI and smooth animations.",
-      image: "/images/QuadConnect.png",
+      image: "/RibbaPortfolio/images/QuadConnect.png",
       tech: ["Flutter", "Dart", "Android Development", "Mobile"],
       github: "https://github.com/MogalRibba/Quad_Connect",
       detailedDescription:
@@ -431,8 +431,8 @@ export default function Portfolio() {
           {/* Profile Image */}
           <div className="relative mb-6">
             <div className="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full border-4 border-cyan-400 overflow-hidden relative">
-              <img
-                src="/images/profile.jpeg"
+
+              <img src="/RibbaPortfolio/images/profile.jpeg" 
                 alt="Ribba Mogal"
                 className="w-full h-full object-cover"
               />
@@ -696,7 +696,7 @@ export default function Portfolio() {
 
                     <div className="relative h-40 md:h-48 overflow-hidden">
                       <img
-                        src={project.image || "/placeholder.svg"}
+                        src={project.image || "/RibbaPortfolio/placeholder.svg"}
                         alt={project.title}
                         className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                       />
@@ -802,7 +802,7 @@ export default function Portfolio() {
 
                         <div className="relative h-40 md:h-48 overflow-hidden">
                           <img
-                            src={project.image || "/placeholder.svg"}
+                            src={project.image || "/RibbaPortfolio/placeholder.svg"}
                             alt={project.title}
                             className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
                           />
@@ -1157,7 +1157,7 @@ export default function Portfolio() {
               <div className="grid md:grid-cols-2 gap-6 md:gap-8">
                 <div>
                   <img
-                    src={selectedProject.image || "/placeholder.svg"}
+                    src={selectedProject.image || "/RibbaPortfolio/placeholder.svg"}
                     alt={selectedProject.title}
                     className="w-full h-48 md:h-64 object-cover rounded-lg mb-4"
                   />
