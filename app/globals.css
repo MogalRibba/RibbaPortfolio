@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 15, 15, 15;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 15, 15, 15;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(180deg, #000000 0%, #1a0033 50%, #330066 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(102, 0, 204, 0.1) 70%, rgba(204, 0, 204, 0.2) 100%),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 48px,
+      rgba(204, 0, 204, 0.3) 49px,
+      rgba(204, 0, 204, 0.3) 50px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 48px,
+      rgba(204, 0, 204, 0.3) 49px,
+      rgba(204, 0, 204, 0.3) 50px
+    );
+  background-size: 100% 100%, 50px 50px, 50px 50px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60vh;
+  background: repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      rgba(204, 0, 204, 0.4) 1px,
+      rgba(204, 0, 204, 0.4) 2px,
+      transparent 3px,
+      transparent 50px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px,
+      rgba(204, 0, 204, 0.6) 1px,
+      rgba(204, 0, 204, 0.6) 2px,
+      transparent 3px,
+      transparent 20px
+    );
+  transform: perspective(500px) rotateX(60deg);
+  transform-origin: bottom;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Pixel Font */
+.pixel-font {
+  font-family: "Courier New", "Monaco", "Menlo", monospace;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Synthwave Background */
+.synthwave-bg {
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+/* Softer Neon Effects */
+.neon-cyan {
+  text-shadow: 0 0 5px rgba(34, 211, 238, 0.3), 0 0 10px rgba(34, 211, 238, 0.2), 0 0 15px rgba(34, 211, 238, 0.1);
+}
+
+.neon-pink {
+  text-shadow: 0 0 5px rgba(244, 114, 182, 0.3), 0 0 10px rgba(244, 114, 182, 0.2), 0 0 15px rgba(244, 114, 182, 0.1);
+}
+
+.neon-yellow {
+  text-shadow: 0 0 5px rgba(250, 204, 21, 0.3), 0 0 10px rgba(250, 204, 21, 0.2), 0 0 15px rgba(250, 204, 21, 0.1);
+}
+
+.neon-green {
+  text-shadow: 0 0 5px rgba(34, 197, 94, 0.3), 0 0 10px rgba(34, 197, 94, 0.2), 0 0 15px rgba(34, 197, 94, 0.1);
+}
+
+.neon-purple {
+  text-shadow: 0 0 5px rgba(168, 85, 247, 0.3), 0 0 10px rgba(168, 85, 247, 0.2), 0 0 15px rgba(168, 85, 247, 0.1);
+}
+
+/* Scanlines Effect */
+.scanlines {
+  background: linear-gradient(transparent 50%, rgba(255, 255, 255, 0.005) 50%);
+  background-size: 100% 4px;
+  animation: scanlines 0.1s linear infinite;
+}
+
+@keyframes scanlines {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 4px;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #22d3ee, #f472b6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #0891b2, #ec4899);
+}
