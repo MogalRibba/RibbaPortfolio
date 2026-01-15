@@ -58,7 +58,7 @@ export default function TypingText({
   return (
     <motion.div
       className={`${className} text-cyan-400 neon-cyan`}
-      initial={{ opacity: 0 }}
+      initial={false}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >

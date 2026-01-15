@@ -346,11 +346,11 @@ export default function Portfolio() {
         <section id="home" className="relative min-h-screen flex items-center justify-center px-4 pt-16 lg:pt-0">
           <div className="text-center space-y-6 md:space-y-8 max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              className="space-y-4 md:space-y-6"
-            >
+  initial={false}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1, delay: 0.5 }}
+  className="space-y-4 md:space-y-6"
+>
               <div className="text-left">
                 <div className="text-pink-400 mb-2 md:mb-4 text-xs md:text-sm pixel-font">
                   <span className="text-cyan-400">&lt;</span>CODE<span className="text-cyan-400">&gt;</span>
@@ -366,91 +366,103 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              <motion.div
-                className="text-sm sm:text-base md:text-xl text-slate-300 font-medium pixel-font text-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.5 }}
-              >
-                Frontend Developer / Android Developer / Unity Game Developer
-              </motion.div>
-            </motion.div>
+<motion.div
+  className="text-sm sm:text-base md:text-xl text-slate-300 font-medium pixel-font text-center"
+  initial={false}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 1.5 }}
+>
+  Frontend Developer / Android Developer / Unity Game Developer
+</motion.div>
+</motion.div>
 
-            <motion.div
-              className="flex justify-center"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 2.5 }}
-            >
-              <Button
-                size="lg"
-                className="border-2 border-yellow-400 bg-transparent text-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300 backdrop-blur-md rounded-lg pixel-font text-sm md:text-base"
-                onClick={() => scrollToSection("contact")}
-              >
-                <Mail className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-                Get In Touch
-              </Button>
-            </motion.div>
-          </div>
+<motion.div
+  className="flex justify-center"
+  initial={false}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 2.5 }}
+>
+  <Button
+    size="lg"
+    className="border-2 border-yellow-400 bg-transparent text-yellow-400 hover:bg-yellow-400 hover:text-black transition-all duration-300 backdrop-blur-md rounded-lg pixel-font text-sm md:text-base"
+    onClick={() => scrollToSection("contact")}
+  >
+    <Mail className="w-4 h-4 md:w-5 md:h-5 mr-2" />
+    Get In Touch
+  </Button>
+</motion.div>
+</div>
 
-          <motion.div
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-          >
-            <ChevronDown className="w-6 h-6 md:w-8 md:h-8 text-cyan-400" />
-          </motion.div>
-        </section>
+<motion.div
+  className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+  animate={{ y: [0, 10, 0] }}
+  transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
+>
+  <ChevronDown className="w-6 h-6 md:w-8 md:h-8 text-cyan-400" />
+</motion.div>
+</section>
 
         {/* About Me Section */}
-        <section id="about" className="py-12 md:py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-8 md:mb-12"
-            >
-              <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-cyan-400 neon-cyan pixel-font mb-4">
-                ABOUT ME
-              </h2>
-              <p className="text-pink-400 text-base md:text-lg pixel-font">DISCOVER MY JOURNEY AND PASSION</p>
-            </motion.div>
+<section id="about" className="py-12 md:py-20 px-4">
+  <div className="max-w-7xl mx-auto">
+    <motion.div
+      initial={false}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="text-center mb-8 md:mb-12"
+    >
+      <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-cyan-400 neon-cyan pixel-font mb-4">
+        ABOUT ME
+      </h2>
+      <p className="text-pink-400 text-base md:text-lg pixel-font">
+        DISCOVER MY JOURNEY AND PASSION
+      </p>
+    </motion.div>
 
-            <div className="grid lg:grid-cols-3 gap-6 md:gap-8">
-              {/* Left Column - Profile Card */}
-              <div className="lg:col-span-1">
-                <motion.div
-                  className="bg-black/50 backdrop-blur-sm p-6 md:p-8 rounded-xl border border-cyan-400 text-center"
-                  initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  {/* Profile Image */}
-                  <div className="relative mb-6">
-                    <div className="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full border-4 border-cyan-400 overflow-hidden relative">
-                      <img src="/images/profile.jpeg" alt="Ribba Mogal" className="w-full h-full object-cover" />
-                    </div>
-                    <div className="absolute top-2 right-1/2 transform translate-x-8 md:translate-x-12 w-3 h-3 md:w-4 md:h-4 bg-green-400 rounded-full border-2 border-black"></div>
-                  </div>
+    <div className="grid lg:grid-cols-3 gap-6 md:gap-8">
+      {/* Left Column - Profile Card */}
+      <div className="lg:col-span-1">
+        <motion.div
+          className="bg-black/50 backdrop-blur-sm p-6 md:p-8 rounded-xl border border-cyan-400 text-center"
+          initial={false}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          {/* Profile Image */}
+          <div className="relative mb-6">
+            <div className="w-24 h-24 md:w-32 md:h-32 mx-auto rounded-full border-4 border-cyan-400 overflow-hidden relative">
+              <img
+                src="/images/profile.jpeg"
+                alt="Ribba Mogal"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="absolute top-2 right-1/2 transform translate-x-8 md:translate-x-12 w-3 h-3 md:w-4 md:h-4 bg-green-400 rounded-full border-2 border-black"></div>
+          </div>
 
-                  {/* Name and Title */}
-                  <h2 className="text-xl md:text-2xl font-bold text-cyan-400 mb-2 pixel-font">RIBBA MOGAL</h2>
-                  <p className="text-pink-400 mb-4 pixel-font text-sm md:text-base">
-                    B.E ELECTRONICS AND COMPUTER SCIENCE
-                  </p>
+          {/* Name and Title */}
+          <h2 className="text-xl md:text-2xl font-bold text-cyan-400 mb-2 pixel-font">
+            RIBBA MOGAL
+          </h2>
+          <p className="text-pink-400 mb-4 pixel-font text-sm md:text-base">
+            B.E ELECTRONICS AND COMPUTER SCIENCE
+          </p>
 
-                  {/* Location and Status */}
-                  <div className="space-y-2 mb-6">
-                    <div className="flex items-center justify-center space-x-2">
-                      <MapPin className="w-3 h-3 md:w-4 md:h-4 text-pink-400" />
-                      <span className="text-slate-300 pixel-font text-sm">MUMBAI, INDIA</span>
-                    </div>
-                    <div className="flex items-center justify-center space-x-2">
-                      <Calendar className="w-3 h-3 md:w-4 md:h-4 text-cyan-400" />
-                      <span className="text-slate-300 pixel-font text-sm">AVAILABLE FOR WORK</span>
-                    </div>
-                  </div>
+          {/* Location and Status */}
+          <div className="space-y-2 mb-6">
+            <div className="flex items-center justify-center space-x-2">
+              <MapPin className="w-3 h-3 md:w-4 md:h-4 text-pink-400" />
+              <span className="text-slate-300 pixel-font text-sm">
+                MUMBAI, INDIA
+              </span>
+            </div>
+            <div className="flex items-center justify-center space-x-2">
+              <Calendar className="w-3 h-3 md:w-4 md:h-4 text-cyan-400" />
+              <span className="text-slate-300 pixel-font text-sm">
+                AVAILABLE FOR WORK
+              </span>
+            </div>
+          </div>
 
                   {/* Stats */}
                   <div className="grid grid-cols-3 gap-4 mb-6">
@@ -514,11 +526,11 @@ export default function Portfolio() {
               {/* Right Column - About Content */}
               <div className="lg:col-span-2">
                 <motion.div
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  className="space-y-6 md:space-y-8"
-                >
+    initial={false}
+    whileInView={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.6 }}
+    className="space-y-6 md:space-y-8"
+  >
                   {/* Main Content */}
                   <div className="space-y-4 md:space-y-6">
                     <div className="mb-4 md:mb-6">
@@ -544,13 +556,14 @@ export default function Portfolio() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {aboutSpecializations.map((specialization, index) => (
                       <motion.div
-                        key={specialization.title}
-                        className={`bg-black/50 backdrop-blur-sm p-4 md:p-6 rounded-xl border ${specialization.color}`}
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        whileHover={{ scale: 1.05 }}
-                      >
+  key={specialization.title}
+  className={`bg-black/50 backdrop-blur-sm p-4 md:p-6 rounded-xl border ${specialization.color}`}
+  initial={false}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: index * 0.1 }}
+  whileHover={{ scale: 1.05 }}
+>
+
                         <div className="flex items-center space-x-3 md:space-x-4 mb-3">
                           {specialization.icon}
                           <h3 className="text-slate-200 font-bold pixel-font text-sm md:text-base">
@@ -570,14 +583,15 @@ export default function Portfolio() {
         </section>
 
         {/* Skills Section */}
-        <section id="skills" className="py-12 md:py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-8 md:mb-12"
-            >
+<section id="skills" className="py-12 md:py-20 px-4">
+  <div className="max-w-6xl mx-auto">
+    <motion.div
+      initial={false}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="text-center mb-8 md:mb-12"
+    >
+
               <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-cyan-400 neon-cyan pixel-font mb-4">
                 SKILLS & TECHNOLOGIES
               </h2>
@@ -592,13 +606,14 @@ export default function Portfolio() {
                 <div className="space-y-4">
                   {skillsData.map((category, categoryIndex) => (
                     <motion.div
-                      key={category.category}
-                      className={`p-4 rounded-lg border ${category.color} ${category.bgColor}`}
-                      initial={{ opacity: 0, x: -30 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: categoryIndex * 0.2 }}
-                      whileHover={{ scale: 1.02 }}
-                    >
+  key={category.category}
+  className={`p-4 rounded-lg border ${category.color} ${category.bgColor}`}
+  initial={false}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ delay: categoryIndex * 0.2 }}
+  whileHover={{ scale: 1.02 }}
+>
+
                       <div className="flex items-center space-x-3 mb-3">
                         {category.icon}
                         <h3 className="text-slate-200 font-bold pixel-font text-sm md:text-base">
@@ -608,13 +623,14 @@ export default function Portfolio() {
                       <div className="flex flex-wrap gap-2">
                         {category.skills.map((skill, index) => (
                           <motion.span
-                            key={skill}
-                            className="px-2 py-1 bg-black/40 backdrop-blur-sm rounded-full text-slate-300 pixel-font text-xs border border-gray-600 hover:border-gray-400 transition-all duration-300"
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: categoryIndex * 0.2 + index * 0.1 }}
-                            whileHover={{ scale: 1.05, y: -2 }}
-                          >
+  key={skill}
+  className="px-2 py-1 bg-black/40 backdrop-blur-sm rounded-full text-slate-300 pixel-font text-xs border border-gray-600 hover:border-gray-400 transition-all duration-300"
+  initial={false}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ delay: categoryIndex * 0.2 + index * 0.1 }}
+  whileHover={{ scale: 1.05, y: -2 }}
+>
+
                             {skill}
                           </motion.span>
                         ))}
@@ -628,13 +644,14 @@ export default function Portfolio() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {skillCategories.map((category, index) => (
                   <motion.div
-                    key={category.title}
-                    className={`bg-black/50 backdrop-blur-sm p-4 md:p-5 rounded-xl border ${category.color} text-center min-h-[140px] flex flex-col justify-center`}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    whileHover={{ scale: 1.05 }}
-                  >
+  key={category.title}
+  className={`bg-black/50 backdrop-blur-sm p-4 md:p-5 rounded-xl border ${category.color} text-center min-h-[140px] flex flex-col justify-center`}
+  initial={false}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: index * 0.1 }}
+  whileHover={{ scale: 1.05 }}
+>
+
                     <div className="mb-3 md:mb-4 flex justify-center">{category.icon}</div>
                     <h3 className="text-slate-200 font-bold pixel-font mb-2 text-sm md:text-base">{category.title}</h3>
                     <p className="text-slate-400 pixel-font text-xs leading-relaxed">{category.description}</p>
@@ -648,12 +665,13 @@ export default function Portfolio() {
         {/* Projects Section */}
         <section id="projects" className="py-12 md:py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-8 md:mb-12"
-            >
+           <motion.div
+  initial={false}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="text-center mb-8 md:mb-12"
+>
+
               <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-cyan-400 neon-cyan pixel-font mb-4">
                 FEATURED PROJECTS
               </h2>
@@ -668,13 +686,14 @@ export default function Portfolio() {
               <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
                 {projects.map((project, index) => (
                   <motion.div
-                    key={project.title}
-                    className="bg-black/50 backdrop-blur-sm rounded-xl border border-gray-800 overflow-hidden hover:border-cyan-400 transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    whileHover={{ y: -5 }}
-                  >
+  key={project.title}
+  className="bg-black/50 backdrop-blur-sm rounded-xl border border-gray-800 overflow-hidden hover:border-cyan-400 transition-all duration-300"
+  initial={false}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: index * 0.1 }}
+  whileHover={{ y: -5 }}
+>
+
                     <div className="relative h-40 md:h-48 overflow-hidden">
                       <img
                         src={project.image || "/placeholder.svg"}
@@ -773,13 +792,14 @@ export default function Portfolio() {
                   >
                     {personalProjects.map((project, index) => (
                       <motion.div
-                        key={project.title}
-                        className="bg-black/50 backdrop-blur-sm rounded-xl border border-gray-800 overflow-hidden hover:border-pink-400 transition-all duration-300 flex-shrink-0 w-80"
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        whileHover={{ y: -5 }}
-                      >
+  key={project.title}
+  className="bg-black/50 backdrop-blur-sm rounded-xl border border-gray-800 overflow-hidden hover:border-pink-400 transition-all duration-300 flex-shrink-0 w-80"
+  initial={false}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ delay: index * 0.1 }}
+  whileHover={{ y: -5 }}
+>
+
                         <div className="relative h-40 md:h-48 overflow-hidden">
                           <img
                             src={project.image || "/placeholder.svg"}
@@ -881,11 +901,12 @@ export default function Portfolio() {
         <section id="experience" className="py-12 md:py-20 px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-8 md:mb-12"
-            >
+  initial={false}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="text-center mb-8 md:mb-12"
+>
+
               <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-cyan-400 neon-cyan pixel-font mb-4">
                 Technical EXPERIENCE
               </h2>
@@ -910,13 +931,14 @@ export default function Portfolio() {
             <div className="space-y-6 md:space-y-8">
               {experiences.map((exp, index) => (
                 <motion.div
-                  key={exp.title}
-                  className={`bg-black/50 backdrop-blur-sm p-4 md:p-6 rounded-xl border ${exp.borderColor}`}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.2 }}
-                  whileHover={{ scale: 1.02 }}
-                >
+  key={exp.title}
+  className={`bg-black/50 backdrop-blur-sm p-4 md:p-6 rounded-xl border ${exp.borderColor}`}
+  initial={false}
+  whileInView={{ opacity: 1, x: 0 }}
+  transition={{ delay: index * 0.2 }}
+  whileHover={{ scale: 1.02 }}
+>
+
                   <div className="flex items-start space-x-3 md:space-x-4">
                     <div className={`p-2 md:p-3 rounded-lg bg-gradient-to-r ${exp.color}`}>{exp.icon}</div>
                     <div className="flex-1">
@@ -940,11 +962,12 @@ export default function Portfolio() {
         <section id="achievements" className="py-12 md:py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-8 md:mb-12"
-            >
+  initial={false}
+  whileInView={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.8 }}
+  className="text-center mb-8 md:mb-12"
+>
+
               <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-cyan-400 neon-cyan pixel-font mb-4">
                 ACHIEVEMENTS
               </h2>
@@ -956,7 +979,7 @@ export default function Portfolio() {
                 <motion.div
                   key={achievement.title}
                   className={`bg-black/50 backdrop-blur-sm p-4 md:p-6 rounded-xl border ${achievement.borderColor}`}
-                  initial={{ opacity: 0, y: 30 }}
+                  initial={false}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ scale: 1.05 }}
@@ -998,7 +1021,7 @@ export default function Portfolio() {
         <section id="contact" className="py-12 md:py-20 px-4">
           <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+             initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-8 md:mb-12"
@@ -1013,7 +1036,7 @@ export default function Portfolio() {
 
             <motion.div
               className="max-w-2xl mx-auto bg-black/50 backdrop-blur-sm p-6 md:p-8 rounded-xl border border-gray-800"
-              initial={{ opacity: 0, y: 50 }}
+              initial={false}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
@@ -1104,14 +1127,14 @@ export default function Portfolio() {
       {selectedProject && (
         <motion.div
           className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-          initial={{ opacity: 0 }}
+          initial={false}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={() => setSelectedProject(null)}
         >
           <motion.div
             className="bg-black/90 backdrop-blur-md rounded-xl border border-cyan-400 max-w-4xl w-full max-h-[90vh] overflow-y-auto"
-            initial={{ scale: 0.8, opacity: 0 }}
+            initial={false}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             onClick={(e) => e.stopPropagation()}
