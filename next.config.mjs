@@ -8,12 +8,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-
-  experimental: {
-    appDir: true,
-  },
-
-  reactStrictMode: false,
 };
 
 export default nextConfig;
